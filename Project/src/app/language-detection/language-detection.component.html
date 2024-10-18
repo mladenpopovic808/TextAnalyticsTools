@@ -1,0 +1,35 @@
+<div>
+  <h3>Jezicka detekcija :D </h3>
+
+  <input [(ngModel)]="cleanBoolean" type="checkbox" id="checkboxLanguage" name="cleanCheckBox" id="cleanCheckBox">
+  <label for="cleanCheckBox">Clean (Optinal)</label>
+
+  <br><br>
+
+
+
+    <div class="form-group mb-3">
+      <textarea [(ngModel)]="enteredText" class="form-control" id="text" placeholder="Enter your text" id="textLanguage" rows="4"></textarea>
+    </div>
+    <button (click)="submitLanguageDetection()" class="btn btn-primary">Submit</button>
+
+
+  <label>Languages:</label>
+
+  <div *ngFor="let language of detectedLangs; let i=index">
+    <ol>
+      <li>{{i+1}}. {{language.lang}} --> {{(language.confidence*100).toFixed(2)}}%</li>
+    </ol>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+</div>

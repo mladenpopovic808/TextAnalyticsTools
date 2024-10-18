@@ -1,0 +1,35 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Domaci1 </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a [routerLink]="''" class="nav-link active" aria-current="page" >Entity Extraction</a>
+        </li>
+
+        <li class="nav-item">
+          <a [routerLink]="'/languageDetection'" class="nav-link">Language Detection</a>
+        </li>
+
+        <li class="nav-item">
+          <a [routerLink]="'/textSimilarity'" class="nav-link">Text Similarity</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="'/sentimentAnalysis'" class="nav-link">Sentiment Analysis</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="'/tokenEntry'" class="nav-link">Token Entry</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="'/apiHistory'" class="nav-link">Api History</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container pt-3">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,17 @@
+<h3>Text Similarity :D</h3>
+
+<div>
+  <p>Text 1</p>
+  <textarea [(ngModel)]="text1" placeholder="Unesite text 1" rows="7" cols="130"></textarea>
+  <br><br>
+  <p>Text 2</p>
+  <textarea [(ngModel)]="text2" placeholder="Unesite text 1" rows="7" cols="130"></textarea>
+  <br><br>
+  <button (click)="checkSimilarity()">Submit</button>
+  <br><br>
+
+  <p>{{resultString}}</p>
+
+
+
+</div>

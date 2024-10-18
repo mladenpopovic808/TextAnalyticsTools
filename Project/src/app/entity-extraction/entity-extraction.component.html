@@ -1,0 +1,40 @@
+<div>
+  <h3 class="mb-5">Entity Exctraction</h3>
+
+  <p>Choose what is included</p>
+  <input [(ngModel)]="abstract" type="checkbox" id="abstractCheckbox">
+  <label for="abstractCheckbox">Abstract</label>
+  <br>
+
+
+  <input [(ngModel)]="categories" type="checkbox" id="categoriesCheckbox">
+  <label for="categoriesCheckbox">Categories</label>
+  <br>
+
+  <input [(ngModel)]="image" type="checkbox" id="imageCheckbox">
+  <label for="imageCheckbox">Image</label>
+  <br>  <br>
+
+
+  <input [(ngModel)]="confidence" type="range" name="min_confidence" value="0.5" id="id_min_confidence"
+          max="1.0" step="0.01" min="0.0">
+  <p>Confidence: {{confidence}}</p>
+
+  <textarea [(ngModel)]="text" placeholder="Enter text" rows="7" cols="100"></textarea>
+  <br><br>
+  <button class="btn-primary btn" (click)="extractEntities()">Submit</button>
+
+
+  <p>The extracted entities are:</p>
+  <div *ngFor="let entity of results; let i = index;" class="mb-2">
+    <p><b>Word: </b>{{ entity.title }}</p>
+    <p *ngIf="entity.abstract!=null"><b>Abstract: </b>{{ entity.abstract }}</p>
+    <p *ngIf="entity.categories!=null"><b>Categories: </b>{{ entity.categories }}</p>
+    <p *ngIf="entity.image!=null"><b>Image: </b><img src="{{ entity.image.thumbnail }}"></p>
+    <hr>
+  </div>
+
+
+
+
+</div>

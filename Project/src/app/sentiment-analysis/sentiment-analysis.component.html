@@ -1,0 +1,26 @@
+<div>
+  <h4> Sentiment Analysis :DDD</h4>
+  <p>Language selection</p>
+  <select [(ngModel)]="languageOption">
+    <option>en</option>
+    <option>it</option>
+    <option>auto</option>
+  </select>
+  <br><br>
+  <p>text</p>
+
+  <textarea [(ngModel)]="enteredText" placeholder="Enter text" rows="10" cols="100"></textarea>
+  <br>
+  <button type="button" (click)="submitForm()" class="btn btn-primary">Submit form</button>
+
+
+  <div *ngIf="sentiment.score>=-1">
+    <p>Result is : {{sentiment.score}} </p>
+    <p [style.color]="colorClass">{{sentiment.type}}</p>
+  </div>
+
+
+
+
+
+</div>

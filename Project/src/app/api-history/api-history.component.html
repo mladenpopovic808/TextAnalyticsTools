@@ -1,0 +1,12 @@
+<div>
+  <h3>Ovo je vasa istorija http poziva</h3>
+  <hr>
+
+  <div *ngFor="let api of savedTransactions; let i = index;" class="mb-2">
+    <p>{{i+1}}. {{api.date}}...{{api.time}}...{{api.method}} {{api.url}}   </p>
+
+
+  </div>
+
+
+</div>
